@@ -1,0 +1,115 @@
+{
+	"folder": "annotations",
+	"filename": "former3_169_5R.ply",
+	"path": "C:\\Program Files\\Ansell\\Application\\src_process\\data\\annotations\\former3_169_5R.ply",
+	"objects": [
+		{
+			"name": "cart",
+			"centroid": {
+				"x": -0.1908196,
+				"y": -0.23602801,
+				"z": 0.08046184
+			},
+			"dimensions": {
+				"length": 0.75,
+				"width": 0.55,
+				"height": 0.15
+			},
+			"rotations": {
+				"x": 0,
+				"y": 0,
+				"z": 235
+			}
+		},
+		{
+			"name": "finger_5",
+			"centroid": {
+				"x": 0.26114904,
+				"y": 8.61356698,
+				"z": 3.95624264
+			},
+			"dimensions": {
+				"length": 10.0,
+				"width": 3.0,
+				"height": 12.0
+			},
+			"rotations": {
+				"x": 0,
+				"y": 0,
+				"z": 3.0
+			}
+		},
+		{
+			"name": "finger_4",
+			"centroid": {
+				"x": 2.74767412,
+				"y": 4.39762948,
+				"z": 4.30485812
+			},
+			"dimensions": {
+				"length": 14.0,
+				"width": 3.5,
+				"height": 12.0
+			},
+			"rotations": {
+				"x": 0,
+				"y": 0,
+				"z": 2.0
+			}
+		},
+		{
+			"name": "finger_3",
+			"centroid": {
+				"x": 2.57164211,
+				"y": -0.44173493,
+				"z": 3.96625285
+			},
+			"dimensions": {
+				"length": 15.0,
+				"width": 4.0,
+				"height": 12.0
+			},
+			"rotations": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			}
+		},
+		{
+			"name": "finger_2",
+			"centroid": {
+				"x": 2.42992602,
+				"y": -5.19377851,
+				"z": 4.56250948
+			},
+			"dimensions": {
+				"length": 14.0,
+				"width": 4.0,
+				"height": 12.0
+			},
+			"rotations": {
+				"x": 0,
+				"y": 0,
+				"z": 359.3
+			}
+		},
+		{
+			"name": "finger_1",
+			"centroid": {
+				"x": -2.45271375,
+				"y": -12.00939366,
+				"z": -6.01459279
+			},
+			"dimensions": {
+				"length": 10.0,
+				"width": 4.0,
+				"height": 13.0
+			},
+			"rotations": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			}
+		}
+	]
+}

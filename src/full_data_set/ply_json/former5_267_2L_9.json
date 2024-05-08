@@ -1,0 +1,97 @@
+{
+  "folder": "label_files",
+  "filename": "former5_267_2L",
+  "path": "D:\\Laser_controller_new_combined\\full_data_set\\label_files\\former5_267_2L.json",
+  "objects": [
+    {
+      "name": "finger_1",
+      "centroid": {
+        "x": -5.525399061042845,
+        "y": -8.46401843,
+        "z": -7.422584684015785
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 3.5,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 0,
+        "y": 0,
+        "z": 4.000000000000001
+      }
+    },
+    {
+      "name": "finger_2",
+      "centroid": {
+        "x": 1.8806889622451006,
+        "y": -4.25749832,
+        "z": 4.790794077548281
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 3.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 0,
+        "y": 0,
+        "z": 4.000000000000003
+      }
+    },
+    {
+      "name": "finger_3",
+      "centroid": {
+        "x": 2.7264125784134516,
+        "y": -0.83151246,
+        "z": 5.187307441399966
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 3.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 0,
+        "y": 0,
+        "z": 4.000000000000003
+      }
+    },
+    {
+      "name": "finger_4",
+      "centroid": {
+        "x": 2.5958918023068884,
+        "y": 2.97217649,
+        "z": 5.401567900016924
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 3.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 0,
+        "y": 0,
+        "z": 4.000000000000003
+      }
+    },
+    {
+      "name": "finger_5",
+      "centroid": {
+        "x": 0.47375262319319145,
+        "y": 6.35106255,
+        "z": 4.920723421104227
+      },
+      "dimensions": {
+        "length": 11.0,
+        "width": 3.0,
+        "height": 9.97
+      },
+      "rotations": {
+        "x": 0,
+        "y": 0,
+        "z": 4.000000000000005
+      }
+    }
+  ]
+}

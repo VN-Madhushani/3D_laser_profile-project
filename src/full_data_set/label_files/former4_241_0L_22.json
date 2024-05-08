@@ -1,0 +1,97 @@
+{
+  "folder": "label_files",
+  "filename": "former4_241_0L",
+  "path": "D:\\Laser_controller_new_combined\\full_data_set\\label_files\\former4_241_0L.json",
+  "objects": [
+    {
+      "name": "finger_5",
+      "centroid": {
+        "x": -3.505831026434253,
+        "y": -5.433047432144435,
+        "z": 5.150056616525048
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 3.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 350.0,
+        "y": 0,
+        "z": 7.880000370860131
+      }
+    },
+    {
+      "name": "finger_4",
+      "centroid": {
+        "x": -0.5833570412000357,
+        "y": -1.6261344872921983,
+        "z": 6.2150622826814805
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 3.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 350.0,
+        "y": 0,
+        "z": 7.880000370860131
+      }
+    },
+    {
+      "name": "finger_3",
+      "centroid": {
+        "x": -0.5803143986809816,
+        "y": 2.0410851643967773,
+        "z": 5.170967104408293
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 3.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 350.0,
+        "y": 0,
+        "z": 7.880000370860126
+      }
+    },
+    {
+      "name": "finger_2",
+      "centroid": {
+        "x": -1.8739440716155924,
+        "y": 5.170805323921261,
+        "z": 3.5799224078632306
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 3.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 350.0,
+        "y": 0,
+        "z": 7.880000370860123
+      }
+    },
+    {
+      "name": "figner_1",
+      "centroid": {
+        "x": -4.282975137539944,
+        "y": 5.994727570699447,
+        "z": -11.471668047101591
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 4.5,
+        "height": 15.0
+      },
+      "rotations": {
+        "x": 350.0,
+        "y": 0,
+        "z": 7.880000370860127
+      }
+    }
+  ]
+}

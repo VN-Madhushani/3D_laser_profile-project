@@ -1,0 +1,97 @@
+{
+  "folder": "label_files",
+  "filename": "former1_22_0R",
+  "path": "D:\\Laser_controller_new_combined\\full_data_set\\label_files\\former1_22_0R.json",
+  "objects": [
+    {
+      "name": "finger_1",
+      "centroid": {
+        "x": -5.057127194793609,
+        "y": -12.557855947519158,
+        "z": -6.963050119897139
+      },
+      "dimensions": {
+        "length": 8.0,
+        "width": 4.5,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 354.0,
+        "y": 0,
+        "z": 354.0326308072963
+      }
+    },
+    {
+      "name": "finger_2",
+      "centroid": {
+        "x": 3.2860331459000647,
+        "y": -5.244156276474182,
+        "z": 5.342741898763653
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 4.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 354.0,
+        "y": 0,
+        "z": 354.0326308072963
+      }
+    },
+    {
+      "name": "finger_3",
+      "centroid": {
+        "x": 4.686565023109807,
+        "y": -0.718832517449139,
+        "z": 4.771480864662015
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 4.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 354.0,
+        "y": 0,
+        "z": 354.0326308072963
+      }
+    },
+    {
+      "name": "finger_4",
+      "centroid": {
+        "x": 3.8880846685947166,
+        "y": 4.345031750626646,
+        "z": 3.8985902913837664
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 4.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 354.0,
+        "y": 0,
+        "z": 354.0326308072963
+      }
+    },
+    {
+      "name": "finger_5",
+      "centroid": {
+        "x": 1.0675925758888776,
+        "y": 8.940928667577586,
+        "z": 2.034278685292726
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 3.5,
+        "height": 9.0
+      },
+      "rotations": {
+        "x": 354.0,
+        "y": 0,
+        "z": 354.0326308072963
+      }
+    }
+  ]
+}

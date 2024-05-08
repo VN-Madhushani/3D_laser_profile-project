@@ -1,0 +1,97 @@
+{
+  "folder": "label_files",
+  "filename": "former1_22_0R",
+  "path": "D:\\Laser_controller_new_combined\\full_data_set\\label_files\\former1_22_0R.json",
+  "objects": [
+    {
+      "name": "finger_1",
+      "centroid": {
+        "x": -4.319932709665593,
+        "y": -12.055836066235456,
+        "z": -8.231242103302554
+      },
+      "dimensions": {
+        "length": 8.0,
+        "width": 4.5,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 358.0,
+        "y": 0,
+        "z": 359.00060904939164
+      }
+    },
+    {
+      "name": "finger_2",
+      "centroid": {
+        "x": 2.8582046475420606,
+        "y": -5.594710359132513,
+        "z": 5.23201319522671
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 4.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 358.0,
+        "y": 0,
+        "z": 359.00060904939164
+      }
+    },
+    {
+      "name": "finger_3",
+      "centroid": {
+        "x": 4.261696152991225,
+        "y": -1.0362882895946064,
+        "z": 5.100166078300113
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 4.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 358.0,
+        "y": 0,
+        "z": 359.00060904939164
+      }
+    },
+    {
+      "name": "finger_4",
+      "centroid": {
+        "x": 3.4957818243493106,
+        "y": 4.07374668951768,
+        "z": 4.514377798808985
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 4.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 358.0,
+        "y": 0,
+        "z": 359.00060904939164
+      }
+    },
+    {
+      "name": "finger_5",
+      "centroid": {
+        "x": 0.8057481091682671,
+        "y": 8.780099400390773,
+        "z": 2.73475293583706
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 3.5,
+        "height": 9.0
+      },
+      "rotations": {
+        "x": 358.0,
+        "y": 0,
+        "z": 359.00060904939164
+      }
+    }
+  ]
+}

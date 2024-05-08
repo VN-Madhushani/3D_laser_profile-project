@@ -1,0 +1,97 @@
+{
+  "folder": "label_files",
+  "filename": "former3_152_3L",
+  "path": "D:\\Laser_controller_new_combined\\full_data_set\\label_files\\former3_152_3L.json",
+  "objects": [
+    {
+      "name": "finger_5",
+      "centroid": {
+        "x": -3.287754273101823,
+        "y": -6.067478290381853,
+        "z": 2.3644643600000004
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 3.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 0,
+        "y": 8.999999999999982,
+        "z": 0
+      }
+    },
+    {
+      "name": "finger_4",
+      "centroid": {
+        "x": -0.36778909609433175,
+        "y": -3.1422801880555324,
+        "z": 3.1704160200000002
+      },
+      "dimensions": {
+        "length": 13.0,
+        "width": 3.5,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 0,
+        "y": 8.999999999999991,
+        "z": 0
+      }
+    },
+    {
+      "name": "finger_3",
+      "centroid": {
+        "x": 0.41685454371560615,
+        "y": -0.004491885227438972,
+        "z": 5.21108215
+      },
+      "dimensions": {
+        "length": 13.0,
+        "width": 3.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 0,
+        "y": 8.999999999999984,
+        "z": 0
+      }
+    },
+    {
+      "name": "finger_2",
+      "centroid": {
+        "x": 0.23148429658889658,
+        "y": 3.703067366952387,
+        "z": 2.8431087899999996
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 3.5,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 0,
+        "y": 9.000000000000018,
+        "z": 0
+      }
+    },
+    {
+      "name": "finger_1",
+      "centroid": {
+        "x": -4.060168715121637,
+        "y": 8.801201197297232,
+        "z": -8.05513427
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 4.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 0,
+        "y": 8.999999999999996,
+        "z": 0
+      }
+    }
+  ]
+}

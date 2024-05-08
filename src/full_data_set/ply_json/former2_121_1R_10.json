@@ -1,0 +1,97 @@
+{
+  "folder": "label_files",
+  "filename": "former2_121_1R",
+  "path": "D:\\Laser_controller_new_combined\\full_data_set\\label_files\\former2_121_1R.json",
+  "objects": [
+    {
+      "name": "finger_1",
+      "centroid": {
+        "x": -4.346758548141416,
+        "y": -13.4714510416856,
+        "z": -4.412143726341791
+      },
+      "dimensions": {
+        "length": 8.0,
+        "width": 5.0,
+        "height": 8.0
+      },
+      "rotations": {
+        "x": 352.0,
+        "y": 0,
+        "z": 359.0097299837832
+      }
+    },
+    {
+      "name": "finger_2",
+      "centroid": {
+        "x": 2.983451426540529,
+        "y": -4.927642922562832,
+        "z": 8.821651188889275
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 4.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 352.0,
+        "y": 0,
+        "z": 359.0097299837832
+      }
+    },
+    {
+      "name": "finger_3",
+      "centroid": {
+        "x": 4.449046440393987,
+        "y": 0.4224786972701288,
+        "z": 7.950637716032362
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 4.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 352.0,
+        "y": 0,
+        "z": 359.0097299837832
+      }
+    },
+    {
+      "name": "finger_4",
+      "centroid": {
+        "x": 3.8084991608578727,
+        "y": 5.0450012797814425,
+        "z": 7.217736970136839
+      },
+      "dimensions": {
+        "length": 11.0,
+        "width": 4.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 352.0,
+        "y": 0,
+        "z": 359.0097299837832
+      }
+    },
+    {
+      "name": "finger_5",
+      "centroid": {
+        "x": 0.5830108567236092,
+        "y": 9.246697040237324,
+        "z": 4.14532835881756
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 4.0,
+        "height": 10.0
+      },
+      "rotations": {
+        "x": 352.0,
+        "y": 0,
+        "z": 359.0097299837832
+      }
+    }
+  ]
+}

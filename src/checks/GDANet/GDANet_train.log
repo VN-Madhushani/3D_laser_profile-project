@@ -1,0 +1,1128 @@
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=150, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=False, num_points=4096, resume=False, model_type='insiou')
+Using GPU
+GDANet(
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn11): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn12): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn21): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn22): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn31): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn32): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bnc): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn6): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv1): Sequential(
+    (0): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv11): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv12): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(134, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv21): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv22): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(262, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv31): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv32): Sequential(
+    (0): Conv1d(128, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv4): Sequential(
+    (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (convc): Sequential(
+    (0): Conv1d(16, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv5): Sequential(
+    (0): Conv1d(832, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp1): Dropout(p=0.4, inplace=False)
+  (conv6): Sequential(
+    (0): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp2): Dropout(p=0.4, inplace=False)
+  (conv7): Sequential(
+    (0): Conv1d(256, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv8): Conv1d(128, 6, kernel_size=(1,), stride=(1,))
+  (SGCAM_1s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_1g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+)
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=150, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=False, num_points=4096, resume=False, model_type='insiou')
+Using GPU
+GDANet(
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn11): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn12): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn21): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn22): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn31): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn32): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bnc): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn6): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv1): Sequential(
+    (0): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv11): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv12): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(134, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv21): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv22): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(262, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv31): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv32): Sequential(
+    (0): Conv1d(128, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv4): Sequential(
+    (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (convc): Sequential(
+    (0): Conv1d(16, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv5): Sequential(
+    (0): Conv1d(832, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp1): Dropout(p=0.4, inplace=False)
+  (conv6): Sequential(
+    (0): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp2): Dropout(p=0.4, inplace=False)
+  (conv7): Sequential(
+    (0): Conv1d(256, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv8): Conv1d(128, 6, kernel_size=(1,), stride=(1,))
+  (SGCAM_1s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_1g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+)
+Learning rate: 0.003000
+Train 1, loss: 0.284114, train acc: 0.895882, train ins_iou: 0.837355
+Test 1, loss: 0.082687, test acc: 0.966583  test ins_iou: 0.939047
+Max Acc:0.96658
+Max instance iou:0.93905
+former1 iou: 0.93969643
+former2 iou: 0.9419497
+former3 iou: 0.93011415
+former4 iou: 0.941834
+former5 iou: 0.9350127
+former6 iou: 0.94823176
+former7 iou: 0.94753367
+former8 iou: 0.9379722
+former9 iou: 0.9448925
+former10 iou: 0.9483973
+former11 iou: 0.9349909
+former12 iou: 0.9312977
+former13 iou: 0.9289353
+former14 iou: 0.9292684
+former15 iou: 0.94846284
+former16 iou: 0.93616945
+Max class iou:0.93905
+Learning rate: 0.003000
+Train 2, loss: 0.106269, train acc: 0.956411, train ins_iou: 0.921065
+Test 2, loss: 0.088178, test acc: 0.958755  test ins_iou: 0.924098
+Learning rate: 0.003000
+Train 3, loss: 0.088425, train acc: 0.963386, train ins_iou: 0.932945
+Test 3, loss: 0.073348, test acc: 0.970322  test ins_iou: 0.945319
+Max Acc:0.97032
+Max instance iou:0.94532
+former1 iou: 0.94900155
+former2 iou: 0.94155383
+former3 iou: 0.9481682
+former4 iou: 0.94251245
+former5 iou: 0.93524975
+former6 iou: 0.9384007
+former7 iou: 0.94711316
+former8 iou: 0.9351645
+former9 iou: 0.9531141
+former10 iou: 0.9494586
+former11 iou: 0.93576205
+former12 iou: 0.9455836
+former13 iou: 0.96039164
+former14 iou: 0.9516691
+former15 iou: 0.94783515
+former16 iou: 0.94413
+Max class iou:0.94532
+Learning rate: 0.003000
+Train 4, loss: 0.071025, train acc: 0.971010, train ins_iou: 0.946007
+Test 4, loss: 0.051590, test acc: 0.979660  test ins_iou: 0.960594
+Max Acc:0.97966
+Max instance iou:0.96059
+former1 iou: 0.95941615
+former2 iou: 0.9601442
+former3 iou: 0.96484417
+former4 iou: 0.95232844
+former5 iou: 0.95726234
+former6 iou: 0.95998317
+former7 iou: 0.95466065
+former8 iou: 0.96687126
+former9 iou: 0.9644765
+former10 iou: 0.9717044
+former11 iou: 0.95925504
+former12 iou: 0.95419824
+former13 iou: 0.95903426
+former14 iou: 0.9593246
+former15 iou: 0.95850164
+former16 iou: 0.9675039
+Max class iou:0.96059
+Learning rate: 0.003000
+Train 5, loss: 0.063731, train acc: 0.974485, train ins_iou: 0.952136
+Test 5, loss: 0.042426, test acc: 0.983246  test ins_iou: 0.968959
+Max Acc:0.98325
+Max instance iou:0.96896
+former1 iou: 0.9586541
+former2 iou: 0.9687156
+former3 iou: 0.9712277
+former4 iou: 0.966721
+former5 iou: 0.9690419
+former6 iou: 0.96728396
+former7 iou: 0.97555614
+former8 iou: 0.9750957
+former9 iou: 0.97263545
+former10 iou: 0.97107106
+former11 iou: 0.9716353
+former12 iou: 0.96607584
+former13 iou: 0.9711855
+former14 iou: 0.9594116
+former15 iou: 0.96827626
+former16 iou: 0.9707546
+Max class iou:0.96896
+Learning rate: 0.003000
+Train 6, loss: 0.053692, train acc: 0.978647, train ins_iou: 0.959563
+Test 6, loss: 0.046285, test acc: 0.981354  test ins_iou: 0.966133
+Learning rate: 0.003000
+Train 7, loss: 0.046298, train acc: 0.981728, train ins_iou: 0.964806
+Test 7, loss: 0.032322, test acc: 0.986053  test ins_iou: 0.972361
+Max Acc:0.98605
+Max instance iou:0.97236
+former1 iou: 0.96693265
+former2 iou: 0.9778508
+former3 iou: 0.9696341
+former4 iou: 0.97411805
+former5 iou: 0.9732585
+former6 iou: 0.9691212
+former7 iou: 0.9733451
+former8 iou: 0.9797816
+former9 iou: 0.9703674
+former10 iou: 0.97492987
+former11 iou: 0.9717202
+former12 iou: 0.9748511
+former13 iou: 0.96930367
+former14 iou: 0.97400194
+former15 iou: 0.9656875
+former16 iou: 0.9728774
+Max class iou:0.97236
+Learning rate: 0.003000
+Train 8, loss: 0.041906, train acc: 0.983420, train ins_iou: 0.967900
+Test 8, loss: 0.020355, test acc: 0.992004  test ins_iou: 0.983624
+Max Acc:0.99200
+Max instance iou:0.98362
+former1 iou: 0.9842517
+former2 iou: 0.9830847
+former3 iou: 0.9842475
+former4 iou: 0.98488796
+former5 iou: 0.97506595
+former6 iou: 0.9883052
+former7 iou: 0.9813075
+former8 iou: 0.9766702
+former9 iou: 0.9843745
+former10 iou: 0.98717004
+former11 iou: 0.9851946
+former12 iou: 0.9832525
+former13 iou: 0.9830859
+former14 iou: 0.9797872
+former15 iou: 0.99039114
+former16 iou: 0.98691106
+Max class iou:0.98362
+Learning rate: 0.003000
+Train 9, loss: 0.037030, train acc: 0.985685, train ins_iou: 0.971930
+Test 9, loss: 0.029715, test acc: 0.988129  test ins_iou: 0.976890
+Learning rate: 0.003000
+Train 10, loss: 0.032799, train acc: 0.987290, train ins_iou: 0.975021
+Test 10, loss: 0.019590, test acc: 0.992493  test ins_iou: 0.984980
+Max Acc:0.99249
+Max instance iou:0.98498
+former1 iou: 0.9852961
+former2 iou: 0.9869871
+former3 iou: 0.98899484
+former4 iou: 0.9847831
+former5 iou: 0.9874333
+former6 iou: 0.98367846
+former7 iou: 0.98387223
+former8 iou: 0.9792934
+former9 iou: 0.9883254
+former10 iou: 0.9919378
+former11 iou: 0.9827168
+former12 iou: 0.9833915
+former13 iou: 0.97718984
+former14 iou: 0.983161
+former15 iou: 0.98974156
+former16 iou: 0.98287344
+Max class iou:0.98498
+Learning rate: 0.003000
+Train 11, loss: 0.032683, train acc: 0.987352, train ins_iou: 0.975063
+Test 11, loss: 0.026706, test acc: 0.989456  test ins_iou: 0.978478
+Learning rate: 0.003000
+Train 12, loss: 0.030654, train acc: 0.988325, train ins_iou: 0.976980
+Test 12, loss: 0.027722, test acc: 0.988525  test ins_iou: 0.977380
+Learning rate: 0.003000
+Train 13, loss: 0.025784, train acc: 0.990129, train ins_iou: 0.980275
+Test 13, loss: 0.019008, test acc: 0.993134  test ins_iou: 0.985405
+Max Acc:0.99313
+Max instance iou:0.98541
+former1 iou: 0.98744464
+former2 iou: 0.9849743
+former3 iou: 0.98354715
+former4 iou: 0.98781264
+former5 iou: 0.986754
+former6 iou: 0.9886187
+former7 iou: 0.98423076
+former8 iou: 0.98586875
+former9 iou: 0.9833688
+former10 iou: 0.984715
+former11 iou: 0.9849814
+former12 iou: 0.9852184
+former13 iou: 0.981138
+former14 iou: 0.99120194
+former15 iou: 0.98111147
+former16 iou: 0.9854951
+Max class iou:0.98541
+Learning rate: 0.003000
+Train 14, loss: 0.024974, train acc: 0.990477, train ins_iou: 0.980793
+Test 14, loss: 0.014989, test acc: 0.993790  test ins_iou: 0.986600
+Max Acc:0.99379
+Max instance iou:0.98660
+former1 iou: 0.98418236
+former2 iou: 0.9768506
+former3 iou: 0.99261934
+former4 iou: 0.98631716
+former5 iou: 0.98842376
+former6 iou: 0.9867071
+former7 iou: 0.9899047
+former8 iou: 0.9842195
+former9 iou: 0.98784626
+former10 iou: 0.98254627
+former11 iou: 0.99505967
+former12 iou: 0.99216044
+former13 iou: 0.9844073
+former14 iou: 0.98521054
+former15 iou: 0.9872809
+former16 iou: 0.98187006
+Max class iou:0.98660
+Learning rate: 0.003000
+Train 15, loss: 0.022246, train acc: 0.991587, train ins_iou: 0.982939
+Test 15, loss: 0.012731, test acc: 0.994843  test ins_iou: 0.989791
+Max Acc:0.99484
+Max instance iou:0.98979
+former1 iou: 0.9890039
+former2 iou: 0.9916468
+former3 iou: 0.98966426
+former4 iou: 0.9847663
+former5 iou: 0.992163
+former6 iou: 0.9890202
+former7 iou: 0.9868269
+former8 iou: 0.9950015
+former9 iou: 0.9918297
+former10 iou: 0.9907527
+former11 iou: 0.98523486
+former12 iou: 0.98462534
+former13 iou: 0.9915263
+former14 iou: 0.98635143
+former15 iou: 0.9964949
+former16 iou: 0.9917449
+Max class iou:0.98979
+Learning rate: 0.003000
+Train 16, loss: 0.021311, train acc: 0.991908, train ins_iou: 0.983427
+Test 16, loss: 0.014102, test acc: 0.994751  test ins_iou: 0.989177
+Learning rate: 0.003000
+Train 17, loss: 0.020957, train acc: 0.992100, train ins_iou: 0.984016
+Test 17, loss: 0.010163, test acc: 0.996140  test ins_iou: 0.991983
+Max Acc:0.99614
+Max instance iou:0.99198
+former1 iou: 0.9942862
+former2 iou: 0.9909148
+former3 iou: 0.99026746
+former4 iou: 0.98990935
+former5 iou: 0.99146646
+former6 iou: 0.99353504
+former7 iou: 0.9907505
+former8 iou: 0.991565
+former9 iou: 0.9949549
+former10 iou: 0.9939283
+former11 iou: 0.9946188
+former12 iou: 0.9921694
+former13 iou: 0.9928285
+former14 iou: 0.98710054
+former15 iou: 0.99023294
+former16 iou: 0.9932009
+Max class iou:0.99198
+Learning rate: 0.003000
+Train 18, loss: 0.019945, train acc: 0.992429, train ins_iou: 0.984545
+Test 18, loss: 0.016277, test acc: 0.993591  test ins_iou: 0.987024
+Learning rate: 0.003000
+Train 19, loss: 0.021680, train acc: 0.991806, train ins_iou: 0.983394
+Test 19, loss: 0.015885, test acc: 0.994156  test ins_iou: 0.988335
+Learning rate: 0.003000
+Train 20, loss: 0.018561, train acc: 0.993020, train ins_iou: 0.985627
+Test 20, loss: 0.014275, test acc: 0.994125  test ins_iou: 0.988003
+Learning rate: 0.003000
+Train 21, loss: 0.016926, train acc: 0.993687, train ins_iou: 0.986926
+Test 21, loss: 0.008875, test acc: 0.996780  test ins_iou: 0.993494
+Max Acc:0.99678
+Max instance iou:0.99349
+former1 iou: 0.98709655
+former2 iou: 0.99803513
+former3 iou: 0.99365234
+former4 iou: 0.9940834
+former5 iou: 0.9932303
+former6 iou: 0.9934861
+former7 iou: 0.9946805
+former8 iou: 0.99516076
+former9 iou: 0.9969751
+former10 iou: 0.990856
+former11 iou: 0.9939078
+former12 iou: 0.9944425
+former13 iou: 0.9908054
+former14 iou: 0.99499077
+former15 iou: 0.99286705
+former16 iou: 0.99163413
+Max class iou:0.99349
+Learning rate: 0.003000
+Train 22, loss: 0.016994, train acc: 0.993640, train ins_iou: 0.986890
+Test 22, loss: 0.011593, test acc: 0.995361  test ins_iou: 0.990538
+Learning rate: 0.003000
+Train 23, loss: 0.014124, train acc: 0.994737, train ins_iou: 0.988882
+Test 23, loss: 0.013212, test acc: 0.995056  test ins_iou: 0.990267
+Learning rate: 0.003000
+Train 24, loss: 0.014733, train acc: 0.994486, train ins_iou: 0.988430
+Test 24, loss: 0.011290, test acc: 0.995575  test ins_iou: 0.990624
+Learning rate: 0.003000
+Train 25, loss: 0.014752, train acc: 0.994484, train ins_iou: 0.988436
+Test 25, loss: 0.009503, test acc: 0.996048  test ins_iou: 0.991886
+Learning rate: 0.003000
+Train 26, loss: 0.014095, train acc: 0.994792, train ins_iou: 0.989001
+Test 26, loss: 0.006719, test acc: 0.997223  test ins_iou: 0.994337
+Max Acc:0.99722
+Max instance iou:0.99434
+former1 iou: 0.99307734
+former2 iou: 0.9945683
+former3 iou: 0.9946829
+former4 iou: 0.9943165
+former5 iou: 0.9937412
+former6 iou: 0.9917975
+former7 iou: 0.99121714
+former8 iou: 0.99270767
+former9 iou: 0.9921444
+former10 iou: 0.9980847
+former11 iou: 0.99329174
+former12 iou: 0.99651575
+former13 iou: 0.99090284
+former14 iou: 0.9968956
+former15 iou: 0.99896365
+former16 iou: 0.996485
+Max class iou:0.99434
+Learning rate: 0.003000
+Train 27, loss: 0.012586, train acc: 0.995332, train ins_iou: 0.990031
+Test 27, loss: 0.009756, test acc: 0.996323  test ins_iou: 0.992483
+Learning rate: 0.003000
+Train 28, loss: 0.016074, train acc: 0.994058, train ins_iou: 0.987804
+Test 28, loss: 0.012921, test acc: 0.994247  test ins_iou: 0.988086
+Learning rate: 0.003000
+Train 29, loss: 0.014234, train acc: 0.994767, train ins_iou: 0.989026
+Test 29, loss: 0.011826, test acc: 0.994965  test ins_iou: 0.989147
+Learning rate: 0.003000
+Train 30, loss: 0.014062, train acc: 0.994778, train ins_iou: 0.988970
+Test 30, loss: 0.008521, test acc: 0.996964  test ins_iou: 0.993899
+Learning rate: 0.003000
+Train 31, loss: 0.012347, train acc: 0.995452, train ins_iou: 0.990351
+Test 31, loss: 0.012722, test acc: 0.994629  test ins_iou: 0.989451
+Learning rate: 0.003000
+Train 32, loss: 0.010811, train acc: 0.996021, train ins_iou: 0.991382
+Test 32, loss: 0.009648, test acc: 0.996536  test ins_iou: 0.992875
+Learning rate: 0.003000
+Train 33, loss: 0.011310, train acc: 0.995819, train ins_iou: 0.990978
+Test 33, loss: 0.004864, test acc: 0.998245  test ins_iou: 0.996423
+Max Acc:0.99825
+Max instance iou:0.99642
+former1 iou: 0.9966995
+former2 iou: 0.9991281
+former3 iou: 0.9995818
+former4 iou: 0.9929367
+former5 iou: 0.9976942
+former6 iou: 0.99754775
+former7 iou: 0.9936654
+former8 iou: 0.9928574
+former9 iou: 0.9923883
+former10 iou: 0.99647385
+former11 iou: 0.998675
+former12 iou: 0.9980026
+former13 iou: 0.99771726
+former14 iou: 0.994168
+former15 iou: 0.9976039
+former16 iou: 0.99762315
+Max class iou:0.99642
+Learning rate: 0.003000
+Train 34, loss: 0.011939, train acc: 0.995805, train ins_iou: 0.991118
+Test 34, loss: 0.015623, test acc: 0.995148  test ins_iou: 0.990412
+Learning rate: 0.003000
+Train 35, loss: 0.014718, train acc: 0.994602, train ins_iou: 0.988895
+Test 35, loss: 0.006899, test acc: 0.997620  test ins_iou: 0.995247
+Learning rate: 0.003000
+Train 36, loss: 0.010574, train acc: 0.996122, train ins_iou: 0.991563
+Test 36, loss: 0.007587, test acc: 0.996674  test ins_iou: 0.992848
+Learning rate: 0.003000
+Train 37, loss: 0.009895, train acc: 0.996394, train ins_iou: 0.992119
+Test 37, loss: 0.004383, test acc: 0.998459  test ins_iou: 0.996875
+Max Acc:0.99846
+Max instance iou:0.99688
+former1 iou: 0.9985862
+former2 iou: 0.9968149
+former3 iou: 0.99490285
+former4 iou: 0.99863994
+former5 iou: 0.99867857
+former6 iou: 0.9938755
+former7 iou: 0.9984575
+former8 iou: 0.9974903
+former9 iou: 0.997989
+former10 iou: 0.9976796
+former11 iou: 0.9940903
+former12 iou: 0.9977617
+former13 iou: 0.99809337
+former14 iou: 0.99616104
+former15 iou: 0.9969664
+former16 iou: 0.9938186
+Max class iou:0.99688
+Learning rate: 0.003000
+Train 38, loss: 0.013113, train acc: 0.995280, train ins_iou: 0.990183
+Test 38, loss: 0.005869, test acc: 0.997910  test ins_iou: 0.995711
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=150, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=False, num_points=4096, resume=True, model_type='insiou')
+Using GPU
+GDANet(
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn11): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn12): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn21): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn22): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn31): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn32): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bnc): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn6): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv1): Sequential(
+    (0): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv11): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv12): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(134, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv21): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv22): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(262, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv31): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv32): Sequential(
+    (0): Conv1d(128, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv4): Sequential(
+    (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (convc): Sequential(
+    (0): Conv1d(16, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv5): Sequential(
+    (0): Conv1d(832, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp1): Dropout(p=0.4, inplace=False)
+  (conv6): Sequential(
+    (0): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp2): Dropout(p=0.4, inplace=False)
+  (conv7): Sequential(
+    (0): Conv1d(256, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv8): Conv1d(128, 6, kernel_size=(1,), stride=(1,))
+  (SGCAM_1s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_1g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+)
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=3, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=False, num_points=4096, resume=True, model_type='insiou')
+Using GPU
+GDANet(
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn11): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn12): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn21): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn22): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn31): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn32): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bnc): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn6): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv1): Sequential(
+    (0): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv11): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv12): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(134, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv21): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv22): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(262, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv31): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv32): Sequential(
+    (0): Conv1d(128, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv4): Sequential(
+    (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (convc): Sequential(
+    (0): Conv1d(16, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv5): Sequential(
+    (0): Conv1d(832, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp1): Dropout(p=0.4, inplace=False)
+  (conv6): Sequential(
+    (0): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp2): Dropout(p=0.4, inplace=False)
+  (conv7): Sequential(
+    (0): Conv1d(256, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv8): Conv1d(128, 6, kernel_size=(1,), stride=(1,))
+  (SGCAM_1s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_1g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+)
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=3, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=False, num_points=4096, resume=True, model_type='insiou')
+Using GPU
+GDANet(
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn11): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn12): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn21): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn22): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn31): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn32): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bnc): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn6): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv1): Sequential(
+    (0): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv11): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv12): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(134, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv21): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv22): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(262, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv31): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv32): Sequential(
+    (0): Conv1d(128, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv4): Sequential(
+    (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (convc): Sequential(
+    (0): Conv1d(16, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv5): Sequential(
+    (0): Conv1d(832, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp1): Dropout(p=0.4, inplace=False)
+  (conv6): Sequential(
+    (0): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp2): Dropout(p=0.4, inplace=False)
+  (conv7): Sequential(
+    (0): Conv1d(256, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv8): Conv1d(128, 6, kernel_size=(1,), stride=(1,))
+  (SGCAM_1s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_1g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+)
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=3, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=False, num_points=4096, resume=True, model_type='insiou')
+Using GPU
+GDANet(
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn11): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn12): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn21): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn22): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn31): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn32): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bnc): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn6): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv1): Sequential(
+    (0): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv11): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv12): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(134, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv21): Sequential(
+    (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv22): Sequential(
+    (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(262, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv31): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv32): Sequential(
+    (0): Conv1d(128, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv4): Sequential(
+    (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (convc): Sequential(
+    (0): Conv1d(16, 64, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv5): Sequential(
+    (0): Conv1d(832, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp1): Dropout(p=0.4, inplace=False)
+  (conv6): Sequential(
+    (0): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (dp2): Dropout(p=0.4, inplace=False)
+  (conv7): Sequential(
+    (0): Conv1d(256, 128, kernel_size=(1,), stride=(1,))
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv8): Conv1d(128, 6, kernel_size=(1,), stride=(1,))
+  (SGCAM_1s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_1g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2s): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+  (SGCAM_2g): SGCAM(
+    (g): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (W): Sequential(
+      (0): Conv1d(32, 64, kernel_size=(1,), stride=(1,))
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (theta): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+    (phi): Conv1d(64, 32, kernel_size=(1,), stride=(1,))
+  )
+)
+Learning rate: 0.003000
+Train 1, loss: 0.038432, train acc: 0.985405, train ins_iou: 0.971750
+Test 1, loss: 0.010602, test acc: 0.996246  test ins_iou: 0.991979
+Max Acc:0.99625
+Max instance iou:0.99198
+former1 iou: 0.9847703
+former2 iou: 0.9927497
+former3 iou: 0.9963742
+former4 iou: 0.9905409
+former5 iou: 0.9910423
+former6 iou: 0.9891991
+former7 iou: 0.9940624
+former8 iou: 0.99484843
+former9 iou: 0.9904242
+former10 iou: 0.99212646
+former11 iou: 0.994284
+former12 iou: 0.99287075
+former13 iou: 0.9934379
+former14 iou: 0.9931182
+former15 iou: 0.99010885
+former16 iou: 0.991706
+Max class iou:0.99198
+Learning rate: 0.003000
+Train 2, loss: 0.019107, train acc: 0.992850, train ins_iou: 0.985457
+Test 2, loss: 0.007005, test acc: 0.997162  test ins_iou: 0.994019
+Max Acc:0.99716
+Max instance iou:0.99402
+former1 iou: 0.99425185
+former2 iou: 0.99409336
+former3 iou: 0.9907988
+former4 iou: 0.9932758
+former5 iou: 0.9922514
+former6 iou: 0.9947571
+former7 iou: 1.0
+former8 iou: 0.99574417
+former9 iou: 0.99208945
+former10 iou: 0.99045473
+former11 iou: 0.9962672
+former12 iou: 0.9974871
+former13 iou: 0.9919264
+former14 iou: 0.99586636
+former15 iou: 0.99463534
+former16 iou: 0.9904045
+Max class iou:0.99402
+Learning rate: 0.003000
+Train 3, loss: 0.015644, train acc: 0.994233, train ins_iou: 0.988117
+Test 3, loss: 0.006392, test acc: 0.997177  test ins_iou: 0.993589
+Max Acc:0.99718
+Final Max Acc:0.99718
+Final Max instance iou:0.99402
+Final Max class iou:0.99402

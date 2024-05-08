@@ -1,0 +1,97 @@
+{
+  "folder": "label_files",
+  "filename": "former3_147_3R",
+  "path": "D:\\Laser_controller_new_combined\\full_data_set\\label_files\\former3_147_3R.json",
+  "objects": [
+    {
+      "name": "finger_2",
+      "centroid": {
+        "x": -1.8618486600000002,
+        "y": -6.1853766173906175,
+        "z": 3.5320274307781014
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 4.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 1.9999999999999845,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "name": "finger_1",
+      "centroid": {
+        "x": -8.04692697,
+        "y": -12.190480099009948,
+        "z": -8.378950504311053
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 4.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 2.0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "name": "finger_3",
+      "centroid": {
+        "x": -0.86643632,
+        "y": -1.0224329201443116,
+        "z": 4.228212214275169
+      },
+      "dimensions": {
+        "length": 12.0,
+        "width": 4.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 2.0000000000000098,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "name": "finger_4",
+      "centroid": {
+        "x": -1.0534016400000001,
+        "y": 3.8822545669758535,
+        "z": 4.1524419518621
+      },
+      "dimensions": {
+        "length": 11.0,
+        "width": 4.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 1.9999999999999845,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "name": "finger_5",
+      "centroid": {
+        "x": -2.42255666,
+        "y": 8.389489006855348,
+        "z": 0.8405126875115645
+      },
+      "dimensions": {
+        "length": 10.0,
+        "width": 4.0,
+        "height": 12.0
+      },
+      "rotations": {
+        "x": 2.0000000000000098,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ]
+}

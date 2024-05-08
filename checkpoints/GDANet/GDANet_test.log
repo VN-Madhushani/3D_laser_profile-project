@@ -1,0 +1,648 @@
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+former1 iou: 0.99124724
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.992188  test class mIOU: 0.061953, test instance mIOU: 0.991247
+former1 iou: 1.0
+former2 iou: 0.8746829
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.899566  test class mIOU: 0.117168, test instance mIOU: 0.890348
+former1 iou: 0.0
+former2 iou: 0.99368554
+former3 iou: 0.9929915
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.997005  test class mIOU: 0.124167, test instance mIOU: 0.993425
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.99302715
+former4 iou: 1.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.996571  test class mIOU: 0.124564, test instance mIOU: 0.993899
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.9623425
+former5 iou: 0.89139074
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.978819  test class mIOU: 0.115858, test instance mIOU: 0.944605
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.9917626
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.996267  test class mIOU: 0.061985, test instance mIOU: 0.991763
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.78783906
+former6 iou: 0.9618972
+former7 iou: 0.99785405
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.986111  test class mIOU: 0.171724, test instance mIOU: 0.953624
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.97230387
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.975174  test class mIOU: 0.060769, test instance mIOU: 0.972304
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.94501126
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.974219  test class mIOU: 0.059063, test instance mIOU: 0.945011
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.94061446
+former9 iou: 0.99816364
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.990929  test class mIOU: 0.121174, test instance mIOU: 0.983776
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.911524
+former10 iou: 1.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.988064  test class mIOU: 0.119470, test instance mIOU: 0.933643
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.9949884
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.998437  test class mIOU: 0.062187, test instance mIOU: 0.994988
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.9913061
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.995920  test class mIOU: 0.061957, test instance mIOU: 0.991306
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.97215366
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.991493  test class mIOU: 0.060760, test instance mIOU: 0.972154
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.9703754
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.991146  test class mIOU: 0.060648, test instance mIOU: 0.970375
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.9396828
+former13 iou: 0.99044836
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.990061  test class mIOU: 0.120633, test instance mIOU: 0.971411
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.844065
+former14 iou: 0.97668296
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.901042  test class mIOU: 0.113797, test instance mIOU: 0.877219
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.84989566
+former15 iou: 1.0
+former16 iou: 0.0
+Test :: test acc: 0.914149  test class mIOU: 0.115618, test instance mIOU: 0.868659
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.9163952
+former16 iou: 0.0
+Test :: test acc: 0.925391  test class mIOU: 0.057275, test instance mIOU: 0.916395
+former1 iou: 0.0
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.9469412
+Test :: test acc: 0.974537  test class mIOU: 0.059184, test instance mIOU: 0.946941
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+former1 iou: 0.99124724
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.992188  test class mIOU: 0.061953, test instance mIOU: 0.991247
+former1 iou: 1.0
+former2 iou: 0.8746829
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.899566  test class mIOU: 0.117168, test instance mIOU: 0.890348
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+former1 iou: 0.99124724
+former2 iou: 0.0
+former3 iou: 0.0
+former4 iou: 0.0
+former5 iou: 0.0
+former6 iou: 0.0
+former7 iou: 0.0
+former8 iou: 0.0
+former9 iou: 0.0
+former10 iou: 0.0
+former11 iou: 0.0
+former12 iou: 0.0
+former13 iou: 0.0
+former14 iou: 0.0
+former15 iou: 0.0
+former16 iou: 0.0
+Test :: test acc: 0.992188  test class mIOU: 0.061953, test instance mIOU: 0.991247
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=True, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=True, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU
+Namespace(exp_name='GDANet', batch_size=16, test_batch_size=8, epochs=42, use_sgd=False, scheduler='step', step=40, lr=0.003, momentum=0.9, no_cuda=False, manual_seed=1, eval=True, num_points=2880, resume=False, model_type='insiou')
+Using GPU
+Using GPU
+Namespace(exp_name='GDANet', test_batch_size=1, no_cuda=False, manual_seed=1, eval=True, num_points=4096, model_type='insiou')
+Using GPU

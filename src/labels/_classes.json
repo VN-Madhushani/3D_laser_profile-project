@@ -1,0 +1,41 @@
+{
+    "classes": [
+        {
+            "name": "unassigned",
+            "id": 0,
+            "color": "#00ff00"
+        },
+        {
+            "name": "finger_1",
+            "id": 1,
+            "color": "#ffff00"
+        },
+        {
+            "name": "finger_2",
+            "id": 2,
+            "color": "#aaaaff"
+        },
+        {
+            "name": "finger_3",
+            "id": 3,
+            "color": "#0000ff"
+        },
+        {
+            "name": "finger_4",
+            "id": 4,
+            "color": "#ff55ff"
+        },
+        {
+            "name": "finger_5",
+            "id": 5,
+            "color": "#ff0000"
+        }
+    ],
+    "default": 0,
+    "type": "object_detection",
+    "format": "centroid_abs",
+    "created_with": {
+        "name": "labelCloud",
+        "version": "1.1.0"
+    }
+}
